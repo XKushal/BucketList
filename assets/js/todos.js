@@ -1,6 +1,7 @@
 //check off specific todos by clicking 
 //here just .click(function) would have worked but that doesnt 
 //support for the lists that will be added in the future
+//but on() take care of the future li elements
 $("ul").on("click", "li", function(){
 	//
 	// $(this).css("color", "gray");
@@ -40,6 +41,6 @@ $("input[type = 'text']").keypress(function(event){
 		var todoText = $(this).val();//grabs new list from user from input text
 		$(this).val("");
 		//create new lit and add to ul
-		$("ul").append("<li><span>X </span>" + todoText + "</li>")
+		$("ul").append("<li><span><i class='fa fa-trash'></i> </span>" + todoText + "</li>")
 	}
 })
