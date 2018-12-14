@@ -1,5 +1,7 @@
 //check off specific todos by clicking 
-$("li").click(function(){
+//here just .click(function) would have worked but that doesnt 
+//support for the lists that will be added in the future
+$("ul").on("click", "li", function(){
 	//
 	// $(this).css("color", "gray");
 	// $(this).css("text-decoration", "line-through")
@@ -26,7 +28,7 @@ $("li").click(function(){
 });
 
 //CLICK ON X TO DELETE TODO
-$("span").click(function(event){
+$("ul").on("click", "span", function(event){
 	$(this).parent().fadeOut(500, function(){
 		$(this).remove();
 	}); 
